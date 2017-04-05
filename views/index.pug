@@ -1,0 +1,80 @@
+doctype html
+head
+  meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+  link(rel="icon", href="favicon.ico")
+  title Le P'tit Atelier - Salon de coiffure
+  meta(name='description', content="Le P'tit Atelier - Salon de coiffure.")
+  meta(name='Keywords', content='atelier, coiffure, salon de coiffure, coiffeur, coiffeuse')
+  link(href="./css/normalize.css", rel="stylesheet", type="text/css")
+  link(href="./css/main.css", rel="stylesheet", type="text/css")
+  link(href="./css/responsive.css", rel="stylesheet", type="text/css")
+  base(href='/')
+
+body
+  header
+    .row
+      .left
+      .right
+        ul
+          li.scrollTo(data-scroll='intro') Concept
+          li.scrollTo(data-scroll='products') Nos produits
+          li.scrollTo(data-scroll='pricing') Tarifs
+          li.scrollTo(data-scroll='infos') Contact
+  section#home
+    .align
+    .centered
+      h1 Le P'tit Atelier
+      h4 Naturellement cosy
+
+  section#intro
+    .row
+      img.col(src='./img/aside.jpg')
+      .col
+        h3 Notre concept
+        P
+          | Le P'tit Atelier, une autre façon de concevoir la coiffure. Dans une ambiance chaleureuse et conviviale, venez découvrir la coiffure au naturel.
+        p
+          | Spécialisée dans le balayage californien pour apporter douceur et lumière à vos cheveux. Vous découvrirez des colorations aux plantes 100% naturel ayurvedique. Des reﬂets divers tels que 1e cacao, le gingembre, la cannelle etc...
+        p
+          | Bonne découverte.
+  section#products
+    .row
+      h3 Nos produits
+      p Nous sélectionnons uniquement des entreprises respectueuses de l'environnement et des produits 100% naturels. Nous travaillons principalement avec les entreptises Davines et Gaïa.
+      ul
+        li
+        li
+        li
+        li
+        li
+        li
+
+  section#pricing
+
+  section#infos
+    .row
+      .col
+        h5 Horraires :
+        span Lundi : 12h -18h; mardi-jeu-ven : 9h - 18h30
+        span Samedi : 9h - 17h. Fermé le mercredi
+      .col
+        h5 Téléphone et adresse :
+        span 05 56 21 17 66 - 6 place Bernard Roumegoux
+        span 33173 Gradignan
+    #map
+  footer
+    .row
+      .left
+        span Réalisé avec
+        img(src='/img/heart.svg')
+        span par Flüz&Powo
+      .right
+        img(src='/img/copyright.svg')
+        span 2017 copyright le P'tit Atelier
+
+
+
+//- Webpack Bundles
+script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCT7W2cXe5ubk0u5LQYke2lSQqpShoxYz8')
+script(src='./vendor.bundle.js')
+script(src='./app.bundle.js')
