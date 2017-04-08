@@ -1,3 +1,6 @@
+var appear = require('./appear');
+var isMobile = require('./isMobile');
+
 const AppView = Backbone.View.extend({
 
   events: {
@@ -19,6 +22,8 @@ const AppView = Backbone.View.extend({
 
     var Google = window.google;
     var zoom = 17;
+
+    if (isMobile) zoom = 19;
     var image = 'img/cursor.png';
 
     var map = new Google.maps.Map(this.$el.find('#map').get(0), {
@@ -36,9 +41,28 @@ const AppView = Backbone.View.extend({
     return this;
   },
 
+  //-------------------------------------
+  // Appear
+  //-------------------------------------
+  initAppears: function() {
+
+    var that = this;
+
+    // Apparitions
+    $('section').appear();
+    $('section').on('appear', function(event, $els) { $els.addClass('ready'); });
+
+    return this;
+  },
+
   render: function() {
 
-    return this.initMap();
+    var that = this;
+
+    return [
+      this.initMap(),
+      this.initAppears()
+    ]
   },
 
 });
