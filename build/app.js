@@ -23,7 +23,7 @@ const AppView = Backbone.View.extend({
     var Google = window.google;
     var zoom = 17;
 
-    if (isMobile) zoom = 19;
+    if (isMobile) zoom = 21;
     var image = 'img/cursor.png';
 
     var map = new Google.maps.Map(this.$el.find('#map').get(0), {

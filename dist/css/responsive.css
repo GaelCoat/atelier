@@ -11,8 +11,20 @@
 
 @media screen and (max-width: 1000px) {
 
-  header {
+  header .left{
     display: none;
+  }
+
+  header .right,
+  header .right ul{
+    width: 100%;
+    text-align: center;
+  }
+
+  header .right li{
+    font-size: 40px;
+    padding: 30px 0px;
+    margin: 0 24px;
   }
 
   h3 {
