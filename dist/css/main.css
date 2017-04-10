@@ -298,6 +298,7 @@ section#pricing{
 
 section#pricing h3{
   color: #fff;
+  margin-bottom: 24px;
 }
 
 section#pricing .col{
@@ -325,6 +326,10 @@ section#pricing .each{
   transition: .33s ease;
 }
 
+section#pricing .each.no-bot{
+  margin-bottom: 0px;
+}
+
 section#pricing.ready .each{
   opacity: 1;
   transform: translate(0, 0);
@@ -342,7 +347,7 @@ section#pricing .each.legend{
 }
 
 section#pricing .col .each.slice{
-  margin-top: 22px;
+  margin-top: 36px;
 }
 
 section#pricing span{
@@ -364,7 +369,7 @@ section#pricing span.label{
 
 section#pricing span.label.large:first-of-type{
   margin-top: 22px;
-  margin-bottom: 12px;
+  margin-bottom: 2px;
 }
 
 section#pricing .col .each:not(.legend):before{
@@ -379,12 +384,11 @@ section#pricing .col .each:not(.legend):before{
 }
 
 section#pricing .col small{
-  color: #fff;
+  color: rgba(255,255,255,.7);
   font-size: 24px;
   display: block;
   background-color: #ffc3bd;
   position: absolute;
-  opacity: .7;
   right: 0;
   bottom: 0;
   padding-left: 10px;
@@ -453,6 +457,11 @@ footer img{
   width: 22px;
   display: inline-block;
   vertical-align: middle;
+}
+
+footer .right img{
+  position: relative;
+  top: 2px;
 }
 
 footer span{
