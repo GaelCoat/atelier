@@ -41,6 +41,42 @@ const AppView = Backbone.View.extend({
     return this;
   },
 
+  setSizes: function() {
+
+    if (!isMobile) return this;
+
+    this.$el.find('.setSize').each(function(){
+
+      $(this).height($(this).height());
+    });
+
+    return this;
+  },
+
+  initPreload: function() {
+
+    var promises = [];
+
+
+    this.$el.find('.apply-bg').each(function() {
+
+      var $this = $(this);
+      var defer = q.defer();
+      var url = $this.data('bg');
+      var img = new Image();
+      img.src = url;
+      img.onload = function(){
+
+        $this.css('background-image', 'url('+url+')').attr('data-bg', '');
+        return defer.resolve();
+      }
+
+      promises.push(defer.promise)
+    });
+
+    return promises;
+  },
+
   //-------------------------------------
   // Appear
   //-------------------------------------
@@ -59,10 +95,23 @@ const AppView = Backbone.View.extend({
 
     var that = this;
 
-    return [
-      this.initMap(),
-      this.initAppears()
-    ]
+    return q.fcall(function() {
+
+      return [
+        that.initPreload(),
+        that.initAppears(),
+        that.setSizes()
+      ]
+    })
+    .all()
+    .delay(2000)
+    .then(function(){
+
+      that.$el.find('#loader').fadeOut(300);
+      that.$el.removeClass('loading');
+      return that.initMap();
+    });
+
   },
 
 });

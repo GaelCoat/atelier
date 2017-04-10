@@ -1,6 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,900');
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -98,6 +96,16 @@ header:after{
   content: "";
 }
 
+header .left a{
+  display: block;
+  cursor: pointer;
+  font-family: Roboto;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
 header li{
   cursor: pointer;
   font-family: Roboto;
@@ -129,10 +137,8 @@ header li:hover:after{
 
 section#home{
   height: 100vh;
-  background-image: url(../img/hero.jpg);
   background-size: cover;
 }
-
 
 section#home h1{
   color: #fff;
@@ -151,6 +157,10 @@ section#home h4{
   text-shadow: 0 4px 26px rgba(0,0,0,.2);
   font-weight: 100;
   font-size: 28px;
+}
+
+.centered img.logo{
+  width: 25vw;
 }
 
 section.p-top{
@@ -195,10 +205,6 @@ section#intro p:not(:last-child){
   margin-bottom: 12px;
 }
 
-section#products{
-  padding-bottom: 180px;
-}
-
 section#products li{
   width: 33.33333%;
   display: inline-block;
@@ -209,6 +215,7 @@ section#products li{
   opacity: 0;
   transform: translate(0, 48px);
   transition: .33s ease;
+  cursor: default;
 }
 
 section#products.ready li{
@@ -216,12 +223,12 @@ section#products.ready li{
   transform: translate(0, 0);
 }
 
-section#products li:nth-child(1) { background-image: url(/img/products/1.jpg); transition-delay: .4s;}
-section#products li:nth-child(2) { background-image: url(/img/products/2.jpg); transition-delay: .5s;}
-section#products li:nth-child(3) { background-image: url(/img/products/3.jpg); transition-delay: .6s;}
-section#products li:nth-child(4) { background-image: url(/img/products/4.jpg); transition-delay: .7s;}
-section#products li:nth-child(5) { background-image: url(/img/products/5.jpg); transition-delay: .8s;}
-section#products li:nth-child(6) { background-image: url(/img/products/6.jpg); transition-delay: .9s;}
+section#products li:nth-child(1) { transition-delay: .4s;}
+section#products li:nth-child(2) { transition-delay: .5s;}
+section#products li:nth-child(3) { transition-delay: .6s;}
+section#products li:nth-child(4) { transition-delay: .7s;}
+section#products li:nth-child(5) { transition-delay: .8s;}
+section#products li:nth-child(6) { transition-delay: .9s;}
 
 section#products li .overlay{
   position: absolute;
@@ -248,10 +255,10 @@ section#products li:hover .overlay{
 
 section#products li:nth-child(1) .overlay { background-color: #ffc3bd }
 section#products li:nth-child(2) .overlay { background-color: #abe3fd }
-section#products li:nth-child(3) .overlay { background-color: #b0fdab }
+section#products li:nth-child(3) .overlay { background-color: #7de876 }
 section#products li:nth-child(4) .overlay { background-color: #fdabfa }
 section#products li:nth-child(5) .overlay { background-color: #b4abfd }
-section#products li:nth-child(6) .overlay { background-color: #fde4ab }
+section#products li:nth-child(6) .overlay { background-color: #ffcd5a }
 
 section#products li:after{
   display: block;
@@ -407,7 +414,7 @@ section#infos .col h5{
   color: #acacac;
   font-size: 18px;
   text-align: left;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   font-weight: 100;
 }
 
@@ -417,7 +424,7 @@ section#infos .col span{
   font-size: 18px;
   display: block;
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 1.3;
   text-align: left;
 }
 
@@ -459,4 +466,18 @@ footer span{
 
 .right{
   float: right;
+}
+
+#loader{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+body.loading #loader img{
+  margin-right: 17px;
 }

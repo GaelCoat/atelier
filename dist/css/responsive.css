@@ -11,12 +11,24 @@
 
 @media screen and (max-width: 1000px) {
 
+  header {
+    display: none;
+  }
+
   h3 {
     font-size: 60px;
   }
 
   p {
-    font-size: 36px;
+    font-size: 42px;
+  }
+
+  section#home{
+    height: 95vh;
+  }
+
+  .centered img.logo {
+    width: 55vw;
   }
 
   section#home h1 {
@@ -43,7 +55,7 @@
 
   section#products .row > p {
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 48px;
   }
 
   section#products li {
@@ -52,17 +64,17 @@
   }
 
   section#products li h5 {
-    font-size: 56px;
+    font-size: 74px;
     margin-bottom: 24px;
     border-bottom: 2px solid rgba(255,255,255,.5);
   }
 
   section#products li p {
-    font-size: 36px;
+    font-size: 42px;
   }
 
   section#products li .overlay {
-    padding: 50px;
+    padding: 90px;
   }
 
   section#pricing .col {
@@ -85,11 +97,11 @@
   }
 
   section#pricing span {
-    font-size: 42px;
+    font-size: 46px;
   }
 
   section#pricing .col small {
-    font-size: 42px;
+    font-size: 46px;
   }
 
   section#pricing .col .each:not(.legend):before {
@@ -118,18 +130,22 @@
   }
 
   section#infos .col h5 {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 10px;
   }
 
   section#infos .col span {
-    font-size: 36px;
+    font-size: 40px;
     line-height: 1.3;
+  }
+
+  #map {
+    height: 1000px;
   }
 
   footer {
     padding: 32px 0;
-    font-size: 26px;
+    font-size: 27px;
   }
 
   footer img {

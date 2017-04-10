@@ -5,26 +5,29 @@ head
   title Le P'tit Atelier - Salon de coiffure
   meta(name='description', content="Le P'tit Atelier - Salon de coiffure.")
   meta(name='Keywords', content='atelier, coiffure, salon de coiffure, coiffeur, coiffeuse')
+  link(href="https://fonts.googleapis.com/css?family=Roboto:300,900", rel="stylesheet", type="text/css")
   link(href="./css/normalize.css", rel="stylesheet", type="text/css")
   link(href="./css/main.css", rel="stylesheet", type="text/css")
   link(href="./css/responsive.css", rel="stylesheet", type="text/css")
   base(href='/')
 
-body
+body.loading
   header
     .row
       .left
+        a(href='/') Le P'tit Atelier
       .right
         ul
           li.scrollTo(data-scroll='intro') Concept
           li.scrollTo(data-scroll='products') Nos produits
           li.scrollTo(data-scroll='pricing') Tarifs
           li.scrollTo(data-scroll='infos') Contact
-  section#home
+  section#home.setSize.apply-bg(data-bg='./img/hero.jpg')
     .align
     .centered
-      h1 Le P'tit Atelier
-      h4 Naturellement cosy
+      //-h1 Le P'tit Atelier
+      //-h4 Naturellement cosy
+      img.logo(src='./img/logo.svg')
 
   section#intro.p-top(data-appear-top-offset="-150")
     .row
@@ -42,32 +45,32 @@ body
       h3 Nos produits
       p Nous sélectionnons uniquement des entreprises respectueuses de l'environnement et des produits 100% naturels. Nous travaillons principalement avec les entreptises Davines et Gaïa.
       ul
-        li
+        li.apply-bg(data-bg='/img/products/1.jpg')
           .overlay
             .centered
               h5 Title
               p Nous sélectionnons uniquement des entreprises respectueuses de l'environnement et des produits 100% naturels.
-        li
+        li.apply-bg(data-bg='/img/products/2.jpg')
           .overlay
             .centered
               h5 Title
               p Nous sélectionnons uniquement des entreprises respectueuses de l'environnement et des produits 100% naturels.
-        li
+        li.apply-bg(data-bg='/img/products/3.jpg')
           .overlay
             .centered
               h5 Title
               p Nous sélectionnons uniquement des entreprises respectueuses de l'environnement et des produits 100% naturels.
-        li
+        li.apply-bg(data-bg='/img/products/4.jpg')
           .overlay
             .centered
               h5 Title
               p Nous sélectionnons uniquement des entreprises respectueuses de l'environnement et des produits 100% naturels.
-        li
+        li.apply-bg(data-bg='/img/products/5.jpg')
           .overlay
             .centered
               h5 Title
               p Nous sélectionnons uniquement des entreprises respectueuses de l'environnement et des produits 100% naturels.
-        li
+        li.apply-bg(data-bg='/img/products/6.jpg')
           .overlay
             .centered
               h5 Title
@@ -150,10 +153,15 @@ body
       .left
         span Réalisé avec
         img(src='/img/heart.svg')
-        span par Flüz&Powo
+        span par flüz&powo
       .right
         img(src='/img/copyright.svg')
         span 2017 copyright le P'tit Atelier
+
+  #loader
+    .align
+    .centered
+      img.logo(src='/img/logo-black.svg')
 
 
 
