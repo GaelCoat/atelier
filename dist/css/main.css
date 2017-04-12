@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'robotobold';
+  src: url('./fonts/roboto-bold-webfont.woff2') format('woff2'),
+       url('./fonts/roboto-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/roboto-light-webfont.woff2') format('woff2'),
+       url('./fonts/roboto-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   box-sizing: border-box;
@@ -41,8 +56,7 @@ body.loading{
 h3{
   color: #3b3b3b;
   font-size: 30px;
-  font-weight: bold;
-  font-family: Roboto;
+  font-family: robotobold;
   text-align: left;
   line-height: 1.3;
   margin-bottom: 12px;
@@ -99,8 +113,7 @@ header:after{
 header .left a{
   display: block;
   cursor: pointer;
-  font-family: Roboto;
-  font-weight: bold;
+  font-family: robotobold;
   color: #fff;
   text-decoration: none;
   font-size: 24px;
@@ -142,9 +155,8 @@ section#home{
 
 section#home h1{
   color: #fff;
-  font-family: Roboto;
+  font-family: robotoBold;
   font-size: 45px;
-  font-weight: Bold;
   margin: 0;
   margin-bottom: 12px;
   text-shadow: 0 4px 26px rgba(0,0,0,.2);
@@ -274,8 +286,7 @@ section#products li:after{
 }
 
 section#products li h5{
-  font-family: Roboto;
-  font-weight: bold;
+  font-family: robotoBold;
   font-size: 28px;
   text-align: center;
   color: #fff;
@@ -450,11 +461,10 @@ section#infos .col h5{
 }
 
 section#infos .col span{
-  font-family: Roboto;
   color: #3b3b3b;
   font-size: 18px;
   display: block;
-  font-weight: bold;
+  font-family: robotoBold;
   line-height: 1.3;
   text-align: left;
 }
