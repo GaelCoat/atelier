@@ -253,12 +253,19 @@ section#products li:hover .overlay{
   opacity: 1;
 }
 
+section#products li:nth-child(1) { background-color: #ffc3bd }
+section#products li:nth-child(2) { background-color: #abe3fd }
+section#products li:nth-child(3) { background-color: #7de876 }
+section#products li:nth-child(4) { background-color: #fdabfa }
+section#products li:nth-child(5) { background-color: #b4abfd }
+section#products li:nth-child(6) { background-color: #ffdc49 }
+
 section#products li:nth-child(1) .overlay { background-color: #ffc3bd }
 section#products li:nth-child(2) .overlay { background-color: #abe3fd }
 section#products li:nth-child(3) .overlay { background-color: #7de876 }
 section#products li:nth-child(4) .overlay { background-color: #fdabfa }
 section#products li:nth-child(5) .overlay { background-color: #b4abfd }
-section#products li:nth-child(6) .overlay { background-color: #ffcd5a }
+section#products li:nth-child(6) .overlay { background-color: #ffdc49 }
 
 section#products li:after{
   display: block;
@@ -288,6 +295,26 @@ section#products .row > p{
   width: 60%;
   margin-bottom: 24px;
 }
+
+section#products li a{
+  font-size: 18px;
+  text-align: center;
+  color: rgba(255,255,255,1);
+  display: block;
+  padding: 10px 14px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 24px;
+  font-weight: bold;
+  border: 2px solid rgba(255,255,255,.5);
+  transition: .22s;
+}
+
+section#products li a:hover{
+  border: 2px solid rgba(255,255,255,.8);
+}
+
 
 
 section#pricing{
