@@ -104,7 +104,7 @@ const AppView = Backbone.View.extend({
       ]
     })
     .all()
-    .delay(2000)
+    .delay(3000)
     .then(function(){
 
       that.$el.find('#loader').fadeOut(300);
